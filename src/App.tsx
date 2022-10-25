@@ -137,7 +137,18 @@ const LANGUAGES = ["Greek", "English"];
 const mapArrayToBullets = (data: string[]) => (
   <ul>
     {data.map((d) => (
-      <li className="pb-5">{d}</li>
+      <li className="pb-5 last:pb-0">{d}</li>
+    ))}
+  </ul>
+);
+
+const mapObjectToBullets = (data: any) => (
+  <ul>
+    {Object.entries(data).map(([key, value]: any) => (
+      <li className="pb-5 last:pb-0" key={key}>
+        <p className="text-darkgray">{key}</p>
+        <p>{value}</p>
+      </li>
     ))}
   </ul>
 );
@@ -165,7 +176,10 @@ const left = (
 
 const right = (
   <div className="section-list">
-    <Section header="Personal details" children={<></>} />
+    <Section
+      header="Personal details"
+      children={mapObjectToBullets(PERSONAL_DETAILS)}
+    />
     <Section header="Hard Skills" children={mapArrayToBullets(HARD_SKILLS)} />
     <Section header="Languages" children={mapArrayToBullets(LANGUAGES)} />
     <Section
