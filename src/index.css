@@ -9,4 +9,14 @@
     padding: 0;
     font-family: "Poppins", sans-serif;
   }
+
+  .section-list > * {
+    @apply border-b border-lightgray pb-5 mb-5;
+  }
+  .section-list > *:last-child {
+    @apply border-none m-0 pb-0;
+  }
+}
+
+@layer components {
 }

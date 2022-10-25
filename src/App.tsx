@@ -131,57 +131,51 @@ const HARD_SKILLS = [
   "Git",
   "Java",
 ];
+
 const LANGUAGES = ["Greek", "English"];
 
+const mapArrayToBullets = (data: string[]) => (
+  <ul>
+    {data.map((d) => (
+      <li className="pb-5">{d}</li>
+    ))}
+  </ul>
+);
+
+const left = (
+  <div className="section-list">
+    <Section
+      header="Profile"
+      children={<p className=" text-justify">{PROFILE_TEXT}</p>}
+    />
+    <Section
+      header="Experience"
+      children={<ExperienceList items={EXPERIENCE_INFORMATION} />}
+    />
+    <Section
+      header="Volunteer"
+      children={<ExperienceList items={VOLUNTEER_INFORMATION} />}
+    />
+    <Section
+      header="Internship"
+      children={<ExperienceList items={INTERNSHIP_INFORMATION} />}
+    />
+  </div>
+);
+
+const right = (
+  <div className="section-list">
+    <Section header="Personal details" children={<></>} />
+    <Section header="Hard Skills" children={mapArrayToBullets(HARD_SKILLS)} />
+    <Section header="Languages" children={mapArrayToBullets(LANGUAGES)} />
+    <Section
+      header="Education"
+      children={<ExperienceList items={EDUCATION_INFORMATION} />}
+    />
+  </div>
+);
+
 function App() {
-  const left = (
-    <div>
-      <Section
-        header="Profile"
-        children={<p className=" text-justify">{PROFILE_TEXT}</p>}
-      />
-      <div className="border-t border-lightgray my-5"></div>
-      <Section
-        header="Experience"
-        children={<ExperienceList items={EXPERIENCE_INFORMATION} />}
-      />
-      <div className="border-t border-lightgray my-5"></div>
-      <Section
-        header="Volunteer"
-        children={<ExperienceList items={VOLUNTEER_INFORMATION} />}
-      />
-      <div className="border-t border-lightgray my-5"></div>
-      <Section
-        header="Internship"
-        children={<ExperienceList items={INTERNSHIP_INFORMATION} />}
-      />
-      <div className="block md:none border-t border-lightgray my-5"></div>
-    </div>
-  );
-
-  const mapArrayToBullets = (data: string[]) => (
-    <ul>
-      {data.map((d) => (
-        <li className="pb-5">{d}</li>
-      ))}
-    </ul>
-  );
-
-  const right = (
-    <div>
-      <Section header="Personal details" children={<></>} />
-      <div className="border-t border-lightgray my-5"></div>
-      <Section header="Hard Skills" children={mapArrayToBullets(HARD_SKILLS)} />
-      <div className="border-t border-lightgray my-5"></div>
-      <Section header="Languages" children={mapArrayToBullets(LANGUAGES)} />
-      <div className="border-t border-lightgray my-5"></div>
-      <Section
-        header="Education"
-        children={<ExperienceList items={EDUCATION_INFORMATION} />}
-      />
-    </div>
-  );
-
   return (
     <div className="flex flex-col h-screen">
       <Header
