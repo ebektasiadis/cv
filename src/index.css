@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,9 +9,4 @@
     padding: 0;
     font-family: "Poppins", sans-serif;
   }
-}
-
-@page {
-  size: auto;
-  margin: 0;
 }

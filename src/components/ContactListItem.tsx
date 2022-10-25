@@ -9,7 +9,7 @@ function ContactListItem({ contact }: IContactListItem) {
   const { icon, value } = contact;
 
   return (
-    <div className="flex items-center gap-x-2 text-gray">
+    <div className="flex items-center gap-x-2 text-gray w-full md:w-auto">
       {icon}
       <p>{value}</p>
     </div>

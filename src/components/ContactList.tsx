@@ -1,6 +1,5 @@
-import React, { useMemo } from "react";
+import { useMemo } from "react";
 import { Contact } from "../types/contact";
-import { v4 as uuid } from "uuid";
 import ContactListItem from "./ContactListItem";
 
 interface IContactProps {
@@ -9,7 +8,9 @@ interface IContactProps {
 
 function ContactList({ items }: IContactProps) {
   const contactItemComponents = useMemo(() => {
-    return items.map((item) => <ContactListItem key={uuid()} contact={item} />);
+    return items.map((item) => (
+      <ContactListItem key={item.id} contact={item} />
+    ));
   }, [items]);
 
   return (
