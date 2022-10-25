@@ -1,0 +1,73 @@
+import { Experience } from "../types/experience";
+
+const EXPERIENCE: Experience[] = [
+  {
+    id: 1,
+    position: "Full Stack Web Developer",
+    employer: "Linked Business",
+    city: "Athens (Remote)",
+    startDate: new Date("11/01/2021"),
+    endDate: "present",
+    description: `Implemented a web-based data quality control application that our "data analysis" team could use in order to make sure that what the company serves to the customer is correct and updated both in terms of validity and completeness as well as to reduce the time and actions needed by the team to manually check the data.`,
+    skills: [
+      "MongoDB",
+      "Express",
+      "React",
+      "Node.js",
+      "Docker",
+      "Jest",
+      "Cypress",
+      "GitLab CI",
+    ],
+  },
+  {
+    id: 2,
+    position: "Full-stack Web Developer",
+    employer: "Hellenic Armed Forces",
+    startDate: new Date("01/01/2021"),
+    endDate: new Date("10/01/2021"),
+    description: `Developed a warehouse management application for the military base I was in. A warehouse manager could insert new products, search them through filters or rent them to other people of the military base.`,
+    skills: ["MongoDB", "Express", "React", "Node.js", "Docker"],
+  },
+  {
+    id: 3,
+    position: "Full Stack Web Developer",
+    employer: "Linked Business",
+    city: "Athens (Remote)",
+    startDate: new Date("06/01/2020"),
+    endDate: new Date("12/01/2020"),
+    description: `Created from scratch a content management system that receives information from a variant of API endpoints, extracts certain parts of the information using JSONPath and automatically creates a dynamic sharable widgets (charts or data tables). These widgets can be later embedded to various websites. The viewers of the widgets have the option to embed it to their own website or even download an image of it in its current state (hidden labels e.t.c.).`,
+    skills: [
+      "MongoDB",
+      "Express",
+      "React",
+      "Node.js",
+      "Redis",
+      "Docker",
+      "Jest",
+      "GitHub Actions",
+    ],
+  },
+  {
+    id: 4,
+    position: "Software Engineer",
+    employer: "Linked Business",
+    city: "Athens (Remote)",
+    startDate: new Date("10/01/2019"),
+    endDate: new Date("06/01/2020"),
+    description: `Made an information extractor for the legal notices of Public Limited Companies that extracts both the distinctive and full title of the company, its registration number, and the administration team (VAT and role of each person in team). The hard part was that the notices lacked a distinct structure and had varying formats.`,
+    skills: ["Java", "Maven", "MySQL"],
+  },
+  {
+    id: 5,
+    position: "Software Engineer",
+    employer: "Linked Business",
+    city: "Athens (Remote)",
+    startDate: new Date("10/01/2018"),
+    endDate: new Date("07/01/2019"),
+    description: `Developed a Web Scraper with Selenium in Java that extracts and downloads all the legal notices about a certain company from the Government Gazette of the Hellenic Republic and stores them into a MySQL database. Using this tool, I managed to download and organize all the legal notices for the majority of companies residing in Greece.`,
+    skills: ["Java", "Selenium", "PhantomJS", "Maven", "MySQL"],
+  },
+];
+
+export default EXPERIENCE;
