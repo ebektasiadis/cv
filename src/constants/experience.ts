@@ -2,12 +2,22 @@ import { Experience } from "../types/experience";
 
 const EXPERIENCE: Experience[] = [
   {
-    id: 1,
+    id: 6,
+    position: "Associate Frontend Engineer (L4)",
+    employer: "Workable",
+    city: "Athens (Remote)",
+    startDate: new Date("09/01/2023"),
+    endDate: "present",
+    description: ``,
+    skills: ["React", "Jest", "Git"],
+  },
+  {
+    id: 5,
     position: "Full Stack Web Developer",
     employer: "Linked Business",
     city: "Athens (Remote)",
     startDate: new Date("11/01/2021"),
-    endDate: "present",
+    endDate: new Date("09/12/2022"),
     description: `Implemented a web-based data quality control application that our "data analysis" team could use in order to make sure that what the company serves to the customer is correct and updated both in terms of validity and completeness as well as to reduce the time and actions needed by the team to manually check the data.`,
     skills: [
       "MongoDB",
@@ -21,7 +31,7 @@ const EXPERIENCE: Experience[] = [
     ],
   },
   {
-    id: 2,
+    id: 4,
     position: "Full-stack Web Developer",
     employer: "Hellenic Armed Forces",
     startDate: new Date("01/01/2021"),
@@ -49,7 +59,7 @@ const EXPERIENCE: Experience[] = [
     ],
   },
   {
-    id: 4,
+    id: 2,
     position: "Software Engineer",
     employer: "Linked Business",
     city: "Athens (Remote)",
@@ -59,7 +69,7 @@ const EXPERIENCE: Experience[] = [
     skills: ["Java", "Maven", "MySQL"],
   },
   {
-    id: 5,
+    id: 1,
     position: "Software Engineer",
     employer: "Linked Business",
     city: "Athens (Remote)",
